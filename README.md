@@ -6,21 +6,31 @@ Static "launching soon" landing page for **forma.re**. No build step, no depende
 
 The page uses `@font-face` and absolute (`/…`) asset paths, so open it through a local web server rather than double-clicking the file (a `file://` open will fail to load the fonts and favicons).
 
-Pick whichever you have installed:
+### Live reload (recommended)
 
-**Python 3** (already on most machines):
+Auto-refreshes the browser every time you save a file. One-time setup:
+
+```bash
+pip install livereload
+```
+
+Then, from the project root:
+
+```bash
+python serve.py
+```
+
+Open <http://127.0.0.1:8000>. Edit any file and the browser reloads on its own. Stop with `Ctrl+C`.
+
+### Plain server (no reload)
+
+If you just want to preview without installing anything:
 
 ```bash
 python -m http.server 8000
 ```
 
-**Node** (if installed):
-
-```bash
-npx serve .
-```
-
-Then open <http://localhost:8000> in your browser. Stop the server with `Ctrl+C`.
+Then open <http://localhost:8000> and refresh manually. Stop with `Ctrl+C`.
 
 ## Project structure
 
