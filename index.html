@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ============ SEO ============ -->
+  <title>FORMA RE — Launching Soon</title>
+  <meta name="description" content="FORMA RE is launching soon.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://forma.re/">
+
+  <!-- Open Graph / social share -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FORMA RE — Launching Soon">
+  <meta property="og:description" content="FORMA RE is launching soon.">
+  <meta property="og:url" content="https://forma.re/">
+  <meta property="og:image" content="https://forma.re/assets/favicons/android-chrome-512x512.png">
+  <meta name="twitter:card" content="summary">
+
+  <!-- ============ Favicons ============ -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#3a3a3a">
+
+  <style>
+    /* ============ Fonts ============ */
+    @font-face {
+      font-family: "PP Telegraf";
+      src: url("fonts/PPTelegraf-Regular.otf") format("opentype");
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: "PP Telegraf";
+      src: url("fonts/PPTelegraf-Medium.otf") format("opentype");
+      font-weight: 500; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: "PP Telegraf";
+      src: url("fonts/PPTelegraf-SemiBold.otf") format("opentype");
+      font-weight: 600; font-style: normal; font-display: swap;
+    }
+
+    /* ============ Base ============ */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #bfaa8c;
+      --gold-dark: #a8906e;
+      --ink: #3f3f3f;
+      --muted: #8a8a8a;
+    }
+    html, body { height: 100%; }
+    body {
+      font-family: "PP Telegraf", "Helvetica Neue", Arial, sans-serif;
+      color: var(--ink);
+      /* ---- BACKGROUND ----
+         Soft, misty brand-toned gradient. To use a photo instead, replace the
+         whole `background` line below with, e.g.:
+           background: url("bg.jpg") center / cover no-repeat fixed;
+         and drop bg.jpg into this folder. */
+      background:
+        radial-gradient(1200px 800px at 70% 20%, rgba(191,170,140,0.18), transparent 60%),
+        radial-gradient(1000px 900px at 15% 90%, rgba(191,170,140,0.12), transparent 55%),
+        linear-gradient(160deg, #f7f5f1 0%, #efece6 45%, #e7e2d9 100%);
+      min-height: 100%;
+    }
+
+    /* ============ Layout ============ */
+    .wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 48px 24px;
+    }
+    .brand-icon {
+      position: fixed; top: 26px; left: 28px;
+      width: 40px; height: auto; opacity: 0.85;
+    }
+    .logo {
+      width: min(250px, 54vw);
+      height: auto;
+      margin-bottom: 54px;
+    }
+    h1 {
+      font-weight: 400;
+      font-size: clamp(2.4rem, 7vw, 4.6rem);
+      letter-spacing: 0.14em;
+      line-height: 1.08;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .subtitle {
+      margin-top: 26px;
+      max-width: 520px;
+      font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+      line-height: 1.7;
+      letter-spacing: 0.02em;
+      color: var(--muted);
+    }
+    /* ============ Countdown ============ */
+    .countdown {
+      display: flex;
+      gap: clamp(18px, 5vw, 44px);
+      margin-top: 48px;
+    }
+    .countdown .unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 58px;
+    }
+    .countdown .num {
+      font-weight: 600;
+      font-size: clamp(1.9rem, 6vw, 3rem);
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      font-variant-numeric: tabular-nums;
+    }
+    .countdown .label {
+      margin-top: 10px;
+      font-size: 0.62rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 100px;
+      padding: 15px 42px;
+      background: var(--gold);
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      border-radius: 2px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .cta:hover { background: var(--gold-dark); transform: translateY(-1px); }
+
+    /* ============ Socials ============ */
+    .socials {
+      display: flex;
+      gap: 26px;
+      margin-top: 100px;
+    }
+    .socials a {
+      color: var(--muted);
+      transition: color 0.2s ease, transform 0.2s ease;
+      display: inline-flex;
+    }
+    .socials a:hover { color: var(--gold-dark); transform: translateY(-2px); }
+    .socials svg { width: 20px; height: 20px; fill: currentColor; }
+
+    footer {
+      position: fixed; bottom: 20px; left: 0; right: 0;
+      text-align: center;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <img class="brand-icon" src="assets/brand/icon.png" alt="">
+
+  <main class="wrap">
+    <img class="logo" src="assets/brand/logo.png" alt="FORMA RE">
+
+    <h1>Under<br>Construction</h1>
+
+    <p class="subtitle">
+      Something new is taking shape.<br>FORMA RE will be here shortly. 
+      Thank you for your patience.
+    </p>
+
+    <!-- ============ Countdown ============ -->
+    <div class="countdown" id="countdown" aria-live="off">
+      <div class="unit"><span class="num" id="cd-days">00</span><span class="label">Days</span></div>
+      <div class="unit"><span class="num" id="cd-hours">00</span><span class="label">Hours</span></div>
+      <div class="unit"><span class="num" id="cd-mins">00</span><span class="label">Minutes</span></div>
+      <div class="unit"><span class="num" id="cd-secs">00</span><span class="label">Seconds</span></div>
+    </div>
+
+    <!-- TODO: change this to your real contact email -->
+    <a class="cta" href="mailto:info@forma.re">Contact</a>
+
+    <!-- ============ Social links — fill in the href="" values ============ -->
+    <nav class="socials" aria-label="Social media">
+      <a href="" aria-label="Instagram"><!-- Instagram -->
+        <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 1.62c-3.15 0-3.52.01-4.76.07-.98.04-1.51.21-1.87.35-.47.18-.8.4-1.15.75-.35.35-.57.68-.75 1.15-.14.36-.31.89-.35 1.87-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.04.98.21 1.51.35 1.87.18.47.4.8.75 1.15.35.35.68.57 1.15.75.36.14.89.31 1.87.35 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.98-.04 1.51-.21 1.87-.35.47-.18.8-.4 1.15-.75.35-.35.57-.68.75-1.15.14-.36.31-.89.35-1.87.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.98-.21-1.51-.35-1.87-.18-.47-.4-.8-.75-1.15-.35-.35-.68-.57-1.15-.75-.36-.14-.89-.31-1.87-.35-1.24-.06-1.61-.07-4.76-.07Zm0 2.76a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6Zm0 8.74a3.44 3.44 0 1 0 0-6.88 3.44 3.44 0 0 0 0 6.88Zm6.75-8.93a1.24 1.24 0 1 1-2.48 0 1.24 1.24 0 0 1 2.48 0Z"/></svg>
+      </a>
+      <a href="" aria-label="LinkedIn"><!-- LinkedIn -->
+        <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM2.4 9.5h5.16V21H2.4V9.5Zm7.5 0h4.95v1.57h.07c.69-1.24 2.38-2.55 4.9-2.55 5.24 0 6.2 3.45 6.2 7.94V21h-5.16v-3.98c0-.95-.02-2.17-1.32-2.17-1.32 0-1.52 1.03-1.52 2.1V21H9.9V9.5Z"/></svg>
+      </a>
+      <a href="" aria-label="X"><!-- X / Twitter -->
+        <svg viewBox="0 0 24 24"><path d="M18.9 2.5h3.3l-7.2 8.24L23.5 21.5h-6.63l-5.2-6.8-5.94 6.8H2.43l7.7-8.8L2.1 2.5h6.8l4.7 6.22L18.9 2.5Zm-1.16 17h1.83L8.34 4.4H6.38L17.74 19.5Z"/></svg>
+      </a>
+      <a href="" aria-label="Behance"><!-- Behance -->
+        <svg viewBox="0 0 24 24"><path d="M8.3 6.2c.65 0 1.24.06 1.78.18.53.12.99.3 1.36.57.38.26.67.62.88 1.06.2.44.31.98.31 1.63 0 .7-.16 1.28-.48 1.75-.31.46-.78.84-1.4 1.14.85.24 1.49.67 1.9 1.28.42.62.63 1.36.63 2.23 0 .7-.14 1.31-.41 1.82-.27.51-.64.93-1.1 1.25-.46.32-1 .56-1.6.71-.6.15-1.22.23-1.85.23H1V6.2h7.3Zm-.44 5.06c.53 0 .97-.13 1.31-.38.34-.25.5-.66.5-1.22 0-.31-.05-.57-.17-.77-.11-.2-.27-.35-.46-.46-.2-.11-.42-.18-.68-.22-.25-.04-.51-.06-.78-.06H4.28v3.11h3.58Zm.2 5.32c.3 0 .58-.03.85-.09.27-.06.5-.15.7-.29.2-.13.36-.31.48-.54.12-.23.18-.52.18-.87 0-.69-.2-1.18-.58-1.48-.39-.29-.9-.44-1.54-.44H4.28v3.71h3.98ZM16.5 16.6c.36.35.87.53 1.55.53.48 0 .9-.12 1.25-.36.35-.24.57-.5.65-.77h2.4c-.38 1.19-.97 2.04-1.77 2.55-.79.51-1.75.77-2.87.77-.78 0-1.48-.13-2.11-.38-.63-.25-1.16-.6-1.6-1.06-.44-.46-.78-1-1.02-1.64-.24-.63-.36-1.33-.36-2.09 0-.74.12-1.42.37-2.06.25-.63.6-1.18 1.05-1.64.46-.46 1-.82 1.62-1.09.63-.26 1.32-.39 2.08-.39.85 0 1.59.16 2.22.49.63.33 1.15.77 1.55 1.32.4.55.69 1.18.86 1.89.17.71.23 1.45.18 2.23h-6.9c0 .77.26 1.42.63 1.77ZM19.5 11.4c-.29-.32-.77-.49-1.4-.49-.41 0-.75.07-1.02.21-.27.14-.49.31-.65.51-.16.2-.28.42-.34.65-.06.23-.1.43-.11.61h4.27c-.06-.67-.29-1.17-.75-1.5ZM15.2 7.1h5.34v1.3H15.2V7.1Z"/></svg>
+      </a>
+    </nav>
+  </main>
+
+  <footer>© <span id="yr"></span> FORMA RE®. All rights reserved.</footer>
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // ============ Countdown ============
+    // Set your launch date/time here (ISO 8601). Include a timezone offset so it
+    // counts down to the SAME moment for every visitor regardless of their location.
+    //   e.g. "2026-09-01T09:00:00+02:00" (Sept 1 2026, 9am CEST)
+    const LAUNCH_DATE = new Date("2026-09-01T09:00:00+02:00");
+
+    const els = {
+      days:  document.getElementById('cd-days'),
+      hours: document.getElementById('cd-hours'),
+      mins:  document.getElementById('cd-mins'),
+      secs:  document.getElementById('cd-secs'),
+    };
+    const pad = n => String(n).padStart(2, '0');
+
+    function tick() {
+      let diff = Math.floor((LAUNCH_DATE - Date.now()) / 1000);
+      if (diff < 0) diff = 0;
+      els.days.textContent  = pad(Math.floor(diff / 86400));
+      els.hours.textContent = pad(Math.floor(diff % 86400 / 3600));
+      els.mins.textContent  = pad(Math.floor(diff % 3600 / 60));
+      els.secs.textContent  = pad(diff % 60);
+      if (diff === 0) clearInterval(timer);
+    }
+    tick();
+    const timer = setInterval(tick, 1000);
+  </script>
+</body>
+</html>
