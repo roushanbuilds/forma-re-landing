@@ -102,7 +102,13 @@
       line-height: 1.7;
       letter-spacing: 0.02em;
       color: var(--muted);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
     }
+    /* PP Telegraf Regular gives "E" a ~1px optical overshoot vs "R"; Medium
+       (500) renders them equal height, so the brand name sits evenly. */
+    .subtitle .brand-name { font-weight: 500; }
     /* ============ Countdown ============ */
     .countdown {
       display: flex;
@@ -176,6 +182,9 @@
       transform: translateY(-2px);
     }
     .socials svg { width: 18px; height: 18px; fill: currentColor; }
+    /* Behance's "Bē" mark is wide & short; enlarge slightly so it reads at the
+       same optical weight as the square Instagram/LinkedIn glyphs. */
+    .socials a[aria-label="Behance"] svg { width: 24px; height: 24px; }
 
     footer {
       position: fixed; bottom: 20px; left: 0; right: 0;
@@ -195,7 +204,7 @@
     <h1>Under<br>Construction</h1>
 
     <p class="subtitle">
-      Something new is taking shape.<br>FORMA RE will be here shortly. 
+      Something new is taking shape.<br><span class="brand-name">FORMA&nbsp;RE</span> will be here shortly.
       Thank you for your patience.
     </p>
 
@@ -219,7 +228,7 @@
         <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
       </a>
       <a href="https://www.behance.net/roushanmir" target="_blank" rel="noopener noreferrer" aria-label="Behance">
-        <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V4.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/></svg>
+        <svg viewBox="0 0 576 512" role="img" aria-hidden="true"><path d="M232 237.2c26.2-12.4 41.8-30.3 41.8-63 0-59.5-44.4-72.2-95.6-72.2H0v333.7h182c54.3 0 105.3-26 105.3-86.7 0-37.5-17.8-65.3-55.3-72.5zM71.6 156.4h77.8c30 0 57.2 8.4 57.2 43.3 0 32.2-21 45.2-50.8 45.2H71.6v-88.5zm81.8 232.5H71.6V284.1H155c36.5 0 59.5 15.2 59.5 53.8 0 38-27.5 51-61.1 51zM504.4 171.6h-149V135h149v36.6zM544 316.9c0-69.3-40.6-127-114-127-71.4 0-119.9 53.7-119.9 124.1 0 72.9 45.9 123.4 119.9 123.4 56 0 92.3-25.2 109.8-79h-63.4c-6.2 20.1-31.5 30.7-51.2 30.7-38 0-57.9-22.3-57.9-60.1h176.3c.3-4.9.4-9.9.4-15.1zM368.3 290c1.7-31 22.2-50.4 52.9-50.4 32.3 0 48.4 19 51.2 50.4H368.3z"/></svg>
       </a>
     </nav>
   </main>
